@@ -2,7 +2,7 @@
 
 /**
 * n_exit - exit simple shell
-* @env: enviroment that is current 
+* @env: enviroment that is current
 */
 void n_exit(char *env[])
 {
@@ -16,6 +16,7 @@ void n_exit(char *env[])
 void _env(char *env[])
 {
 	int p = 0;
+
 	while (env[p])
 	{
 		_putstr(env[p]);
@@ -25,15 +26,16 @@ void _env(char *env[])
 }
 
 /**
- * check_for_builtins - command check for builtin 
- * @str: check the string 
- * @argv: arguments vector 
- * @env: enviroment that is a current one 
+ * check_for_builtins - command check for builtin
+ * @str: check the string
+ * @argv: arguments vector
+ * @env: enviroment that is a current one
  * Return: pointer function or NULL
  */
 void (*check_for_builtins(char *argv[], char *env[]))(char *env[])
 {
 	int p;
+
 	builtin_t check[] = {
 		{"exit", n_exit},
 		{"env", _env},
