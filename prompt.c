@@ -41,12 +41,12 @@ void execute_command(const char *command)
 	}
 }
 /*
- * user_input - the handle input
+ * _input - the handle input
  * @command: the instruction
  * Return: void
  */
 
-void user_input(char *command, size_t size)
+void _input(char *command, size_t size)
 {
 	if (fgets(command, size, stdin) == NULL)
 	{
@@ -61,5 +61,5 @@ void user_input(char *command, size_t size)
 			exit(EXIT_FAILURE);
 		}
 	}
-	command[strcspn(command, "\n")] = '\0'; // Remove newline
+	command[strcspn(command, "\n")] = '\0'; /* Remove newline*/
 }

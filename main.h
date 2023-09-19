@@ -11,11 +11,8 @@
 /*prompt*/
 void display_prompt(void);
 void execute_command(const char *command);
-void user_input(char *command, size_t size);
+void _input(char *command, size_t size);
 int main(void);
-void prompt_print(char *string, int descriptor);
+void _print(char *string, int descriptor);
 
-void n_exit(char *env[]);
-void _env(char *env[]);
-void (*check_for_builtins(char *argv[], char *env[]))(char *env[]);
 #endif
