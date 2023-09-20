@@ -10,14 +10,6 @@
 #include <string.h>
 #include <sys/wait.h>
 
-
-/*prompt*/
-void display_prompt(void);
-void execute_command(const char *command);
-void _input(char *command, size_t size);
-int main(void);
-void _print(char *string, int descriptor);
-
 /*__FUNCTION_PROTOTYPES*/
 void show_prompt(void);
 char *read_command(void);
