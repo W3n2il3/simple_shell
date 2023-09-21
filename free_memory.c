@@ -8,11 +8,9 @@ void free_memory(char **args)
 {
 	/*size_t i;*/
 
-	/**
-	 * for (i = 0; args[i] != NULL; i++)
-	*{
-	*	free(args[i]);
-	*}
-	*/
+	 for (i = 0; args[i] != NULL; i++)
+	{
+		free(args[i]);
+	}
 	free(args);
 }
