@@ -35,24 +35,3 @@ int execute_command(char **args)
 	}
 	return (1);
 }
-/**
- * user_input- the input user
- * @char: the input charector
- * @size_t: the size of the input
- *
- */
-
-#include "shell.h"
-void user_input(char *command, size_t size) 
-{
-    if (fgets(command, size, stdin) == NULL) {
-        if (feof(stdin)) {
-            printf("\n");
-            exit(EXIT_SUCCESS);
-        } else {
-            perror("fgets");
-            exit(EXIT_FAILURE);
-        }
-    }
-    command[strcspn(command, "\n")] = '\0'; // Remove newline
-}
