@@ -16,6 +16,9 @@ char **parse_command(char *command);
 int execute_command(char **args);
 void free_memory(char **args);
 void n_exit(char *env[]);
+void user_input(char *command, size_t size);
+int main(void);
+
 void _env(char *env[]);
 void (*check_for_builtins(char *argv[], char *env[]))(char *env[]);
 
