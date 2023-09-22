@@ -15,13 +15,13 @@ int main(void)
 	{
 		/*show_prompt();*/
 		command = read_command();
-		/**
-		 * if (strcmp(command, "") == 0)
-		*{
-		*	free(command);
-		*	break;
-		*}
-		*/
+		
+		 if (strcmp(command, "") == 0)
+		{
+			free(command);
+			break;
+		}
+		
 		args = parse_command(command);
 		status = execute_command(args);
 
