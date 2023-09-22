@@ -15,5 +15,8 @@ char *read_command(void);
 char **parse_command(char *command);
 int execute_command(char **args);
 void free_memory(char **args);
+void n_exit(char *env[]);
+void _env(char *env[]);
+void (*check_for_builtins(char *argv[], char *env[]))(char *env[]);
 
 #endif /*SIMPLE_SHELL_H*/
